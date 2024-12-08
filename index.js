@@ -1,4 +1,4 @@
-const farmAnimals = 'cow horse sheep pig chicken';
+const farmAnimals = 'cow ,horse ,sheep ,pig ,chicken';
 
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 
@@ -24,6 +24,35 @@ const nestedMuppet = {
   nestedJob: 'Host of The Muppet Show',
   nestedPartner: 'Miss Piggy'
 };
+// 1. Destructure animal sounds
+const [moo, neigh, baa, oink, cluck] = 'cow,horse,sheep,pig,chicken'.split(',');
+
+// 2. Destructure four animals and rename them
+const [bessie, , dolly, babe, little] = 'cow,horse,sheep,pig,chicken'.split(',');
+
+// 3. Destructure and rename animals with colors
+const [blackAndWhite, , black, pink] = 'cow,horse,sheep,pig,chicken'.split(',');
+
+// 4. Destructure color names
+const [red, orange, yellow, green, blue, indigo, violet] = colors;
+
+// 5. Destructure and rename without indigo
+const [r, o, y, g, b, , v] = colors;
+
+// 6. Destructure and assign only indigo
+const [, , , , , indg] = colors;
+
+// 7. Destructure all variables from the muppet object
+const { muppetName, color, song, job, partner } = muppet;
+
+// 8. Destructure songs 2 and 4, Kermit's job, and partner from nestedMuppet
+const {
+  album: {
+    theMuppetMovie: { song2, song4 },
+  },
+  nestedJob,
+  nestedPartner,
+} = nestedMuppet;
 
 // Strings
 
